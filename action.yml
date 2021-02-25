@@ -1,0 +1,6 @@
+# action.yml
+name: 'Rsync deploy with proxy'
+description: 'Deploy using rsync to the server behaind proxy'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

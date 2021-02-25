@@ -15,7 +15,7 @@ example usage to sync everything in the workspace folder:
           USERNAME: ${{ secrets.USERNAME }}
           SERVER_DESTINATION: ${{ secrets.SERVER_DESTINATION }}
           $PROXY_SERVER_PORT: ${{ secrets.PROXY_SERVER_PORT }}
-          $PROXY_USERNAME: ${{ secrets.PROXY_USERNAME }}
+          $PROXY_SERVER_USERNAME: ${{ secrets.PROXY_USERNAME }}
           $PROXY_SERVER_IP: ${{ secrets.PROXY_SERVER_IP }}
 ```
 

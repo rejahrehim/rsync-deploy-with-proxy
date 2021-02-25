@@ -4,3 +4,6 @@ description: 'Deploy using rsync to the server behaind proxy'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+branding:
+  icon: 'box'
+  color: 'blue'

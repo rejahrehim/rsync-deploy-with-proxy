@@ -3,8 +3,8 @@ set -eu
 
 SSHPATH="$HOME/.ssh"
 mkdir -p "$SSHPATH"
-echo "$DEPLOY_KEY" > "$SSHPATH/key"
-chmod 600 "$SSHPATH/key"
+echo "$DEPLOY_KEY" > "$SSHPATH/id_rsa"
+chmod 600 "$SSHPATH/id_rsa"
 SERVER_DEPLOY_STRING="$USERNAME@$SERVER_IP:$SERVER_DESTINATION"
 # sync it up"
-sh -c "rsync $ARGS -e 'ssh -i $SSHPATH/key -o StrictHostKeyChecking=no -p $PROXY_SERVER_PORT -A $PROXY_SERVER_USERNAME@$PROXY_SERVER_IP ssh' $SERVER_DEPLOY_STRING $GITHUB_WORKSPACE/$FOLDER"
+sh -c "rsync $ARGS -e 'ssh -vvvvA -o StrictHostKeyChecking=no -J $PROXY_SERVER_USERNAME@$PROXY_SERVER_IP:$PROXY_SERVER_PORT' $GITHUB_WORKSPACE/$FOLDER $SERVER_DEPLOY_STRING"

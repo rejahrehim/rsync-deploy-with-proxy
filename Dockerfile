@@ -1,4 +1,4 @@
-FROM debian:9.5-slim
+FROM debian:10.8-slim
 
 RUN apt update
 RUN apt -yq install rsync openssh-client
@@ -10,9 +10,9 @@ LABEL "com.github.actions.description"="Deploy to a remote server using rsync ov
 LABEL "com.github.actions.color"="green"
 LABEL "com.github.actions.icon"="truck"
 
-LABEL "repository"="http://github.com/AEnterprise/rsync-deploy"
-LABEL "homepage"="https://github.com/AEnterprise/rsync-deploy"
-LABEL "maintainer"="AEnterprise <aenterprise@aenterprise.info>"
+LABEL "repository"="http://github.com/rejahrehim/rsync-deploy-with-proxy"
+LABEL "homepage"="https://github.com/rejahrehim/rsync-deploy-with-proxy"
+LABEL "maintainer"="RejahRehim <rejah.rehim@gmail.com>"
 
 
 ADD entrypoint.sh /entrypoint.sh

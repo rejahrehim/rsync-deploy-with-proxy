@@ -1,4 +1,4 @@
-FROM debian:10.8-slim
+FROM debian:12.11-slim
 
 RUN apt update
 RUN apt -yq install rsync openssh-client
